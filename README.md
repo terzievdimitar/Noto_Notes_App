@@ -86,4 +86,4 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
 
 ## License
 
-This project is for
+This project is for educational purposes.
