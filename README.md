@@ -52,16 +52,16 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
 
 ### App Setup
 
-1. Install dependencies:
+1. Create a `.env` file .
+
+2. Install dependencies:
       ```bash
       npm run build
       ```
-2. Install dependencies:
+3. Start the application:
       ```bash
       npm run start
       ```
-3. Create a `.env` file .
-
 4. Visit [http://localhost:5001](http://localhost:5001) in your browser.
 
 ## API Endpoints
