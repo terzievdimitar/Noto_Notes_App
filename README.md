@@ -50,31 +50,19 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
 - MongoDB database (local or Atlas)
 - Upstash Redis account (for rate limiting)
 
-### Backend Setup
+### App Setup
 
 1. Install dependencies:
       ```bash
-      cd backend
-      npm install
+      npm run build
       ```
-2. Create a `.env` file (see `.env` for example).
-3. Start the backend server:
+2. Install dependencies:
       ```bash
-      npm run dev
+      npm run start
       ```
+3. Create a `.env` file .
 
-### Frontend Setup
-
-1. Install dependencies:
-      ```bash
-      cd frontend
-      npm install
-      ```
-2. Start the frontend dev server:
-      ```bash
-      npm run dev
-      ```
-3. Visit [http://localhost:5173](http://localhost:5173) in your browser.
+4. Visit [http://localhost:5001](http://localhost:5001) in your browser.
 
 ## API Endpoints
 
@@ -83,6 +71,25 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
 - `POST /api/notes` - Create a new note
 - `PUT /api/notes/:id` - Update a note
 - `DELETE /api/notes/:id` - Delete a note
+
+## Environment Variables
+
+Example `.env` for `/backend`:
+
+```
+MONGO_URI=your_mongodb_connection_string
+PORT=5001
+UPSTASH_REDIS_REST_URL=your_upstash_redis_url
+UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
+CORS_ORIGIN=http://localhost:5173
+NODE_ENV=production
+```
+
+## Notes
+
+- The backend uses `app.set('trust proxy', 1);` for correct IP handling behind proxies.
+- CORS is enabled for the frontend origin specified in `.env`.
+- In production, the backend serves the frontend's static files from `frontend/dist`.
 
 ## License
 
