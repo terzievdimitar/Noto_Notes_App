@@ -83,7 +83,7 @@ If you don't have Docker, visit [the docker guides](https://www.docker.com/get-s
       docker build -t noto-notes-app .
       ```
 
-3. Install dependencies:
+3. Run the container:
       ```bash
       docker run -d --name Noto-Notes-App -p 5001:5001 noto-notes-app
       ```
