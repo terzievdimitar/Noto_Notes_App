@@ -42,6 +42,13 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
   └── index.html          # HTML entry point
 ```
 
+## Screenshots
+
+![Home Page](./screenshots/home.png)
+![Home Page Mobile](./screenshots/home2.png)
+![Note Detail](./screenshots/details.png)
+![Create Note](./screenshots/new.png)
+
 ## Getting Started
 
 ### Prerequisites
@@ -52,7 +59,7 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
 
 ### App Setup
 
-1. Create a `.env` file .
+1. Create a [.env](#environment-variables) file.
 
 2. Install dependencies:
       ```bash
@@ -61,6 +68,24 @@ Noto is a full-stack note-taking application built with the **MERN** stack (Mong
 3. Start the application:
       ```bash
       npm run start
+      ```
+4. Visit [http://localhost:5001](http://localhost:5001) in your browser.
+
+### Run in Docker Container
+
+If you don't have Docker, visit [the docker guides](https://www.docker.com/get-started/) to install it on your OS.
+
+1. Create a [.env](#environment-variables) file.
+
+2. Create Docker Image:
+
+      ```bash
+      docker build -t noto-notes-app .
+      ```
+
+3. Install dependencies:
+      ```bash
+      docker run -d --name Noto-Notes-App -p 5001:5001 noto-notes-app
       ```
 4. Visit [http://localhost:5001](http://localhost:5001) in your browser.
 

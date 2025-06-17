@@ -25,6 +25,7 @@ COPY --from=backend-build /app/backend/node_modules ./node_modules
 COPY --from=backend-build /app/backend/src ./src
 COPY --from=backend-build /app/backend/.env .env
 COPY --from=frontend-build /app/frontend/dist /app/frontend/dist
+COPY backend/.env .env
 
 EXPOSE 5001
 
