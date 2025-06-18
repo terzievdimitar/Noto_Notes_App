@@ -23,9 +23,7 @@ if (!process.env.NODE_ENV !== 'production') {
 
 app.set('trust proxy', 1);
 
-app.use(rateLimiter);
-
-app.use('/api/notes', notesRoutes);
+app.use('/api/notes', rateLimiter, notesRoutes);
 
 if (process.env.NODE_ENV === 'production') {
 	app.use(express.static(path.join(__dirname, '../frontend/dist')));
